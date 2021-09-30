@@ -1,0 +1,13 @@
+.container {
+  max-width: $max-width-lg;
+  margin: auto;
+
+  position: relative;
+  z-index: 50;
+
+  &.text-dark {
+    h2, h3, dt, dd, p {
+      @extend .text-dark;
+    }
+  }
+}

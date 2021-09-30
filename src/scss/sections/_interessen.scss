@@ -1,0 +1,42 @@
+#interessen {
+  position: relative;
+   @include mq($until: desktop) {
+       padding-bottom: 75%;
+   }
+  li {
+    cursor: pointer;
+    color: $dark;
+    img {
+      transition: opacity 0.5s ease-in;
+      opacity: 0;
+      position: absolute;
+      max-width: 45%;
+      top: 0;
+      left: 52%;
+      z-index: 20;
+      @include mq($until: desktop) {
+       left: 2rem;
+       right: 2rem;
+       top: calc(100% + 2rem);
+       max-width: calc(100% - 4rem);
+      }
+      @include mq($until: tablet) {
+       left: 1rem;
+       right: 1rem;
+       top: calc(100% + 1rem);
+       max-width: calc(100% - 2rem);
+      }
+    }
+    &:first-child {
+      img {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      img {
+        opacity: 1;
+      }
+      color: darken($primary, 30);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+main section {
+  background: $dark;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 30;
+
+  &.overlay, &.overlay-primary {
+    background-position: center;
+    background-size: cover;
+  }
+}

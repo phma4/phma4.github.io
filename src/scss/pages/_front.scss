@@ -1,0 +1,19 @@
+.page-front {
+  position: relative;
+  z-index: 10;
+  scroll-behavior: smooth;
+
+  main {
+    position: relative;
+    z-index: 10;
+  }
+
+  ul {
+    margin: 1em auto;
+    list-style: none;
+    li:before {
+      content: "+";
+      margin-right: 0.5em;
+    }
+  }
+}

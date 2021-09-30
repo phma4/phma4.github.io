@@ -1,0 +1,19 @@
+#lebenslauf {
+  h3 {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  dt {
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 80%;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  dd {
+    flex-basis: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .row {
+    align-items: flex-start;
+  }
+}

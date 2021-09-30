@@ -1,0 +1,16 @@
+{
+  "input": "src/views/*.html",
+  "output": "cv",
+  "plugins": {
+    "posthtml-modules": {
+      "root": "./src/views",
+      "initial": true
+    },
+    "posthtml-beautify": {
+      "rules": {
+        "indent": 4,
+        "blankLines": false
+      }
+    }
+  }
+}

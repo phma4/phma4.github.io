@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  margin: auto;
+  max-width: 20rem;
+  flex-direction: column;
+}
+
+label {
+  text-align: center;
+}
+
+input, textarea {
+  font-size: $base-font-size * 1.2;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border: 1px solid $primary;
+  font-family: $base-font-family;
+  color: $dark;
+  background-color: lighten($primary, 35);
+}
+
+input[type=submit] {
+  @extend .btn;
+}

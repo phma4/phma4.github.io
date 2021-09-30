@@ -1,0 +1,57 @@
+html.parallax-enabled {
+  overflow:hidden; /* Root element needs to have overflow hidden */
+
+  body {
+    position: relative;
+    z-index: 10;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll; /* Scroll body element for parallax effect */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    transform-style: preserve-3d; /* we need this for parallax effect*/
+    .video-wrapper {
+      position: absolute;
+      top: 0;
+      @include mq($from: desktop) {
+        /* Create parallax effect by moving von z-Axis and scale on large screens */
+        transform: translateZ(-1px) translateY(-10rem) scale(2.8);
+      }
+    }
+  }
+  main {
+    transform-style: preserve-3d; /* we need this for parallax effect*/
+    position: relative;
+    z-index: 10;
+  }
+
+  section.is-parallax {
+    background: none;
+    overflow: initial;
+    transform-style: preserve-3d; /* we need this for parallax effect*/
+    &:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: auto;
+      /* Create parallax effect by moving von z-Axis and scale */
+      transform: translateZ(-0.5px) scale(1.5);
+      @include mq($until:tablet) {
+        /* Adjust parallax effect for smaller devices */
+        transform: translateZ(-0.25px) translateY(10rem) scale(2);
+      }
+      background-size: cover;
+      z-index: 0;
+      background-image: var(--background-url); /* load background image from css variable */
+    }
+  }
+}
+

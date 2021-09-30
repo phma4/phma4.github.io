@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 20rem;
+  background-color: $primary;
+  color: $dark !important;
+  text-decoration: none;
+  font-size: $base-font-size * 1.2;
+  border: 0;
+  &:hover {
+    background-color: darken($primary,10);
+    text-decoration: none !important;
+  }
+  &.btn-dark {
+    color: $primary !important;
+    background-color: $dark;
+    &:hover {
+      background-color: darken($primary,30);
+    }
+  }
+}

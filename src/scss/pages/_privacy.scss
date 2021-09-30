@@ -1,0 +1,27 @@
+.page-privacy {
+  header {
+    h1 {
+      margin: 2rem 0 1rem 0;
+      @include mq($until:desktop) {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  section {
+    padding: 0;
+  }
+
+  p, h2, h3, h4, h5, ul, ol {
+    max-width: 100%;
+
+  }
+
+  ul {
+    list-style: initial;
+    li:before {
+      display: none;
+    }
+  }
+}
+

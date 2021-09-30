@@ -1,0 +1,55 @@
+@import 'variables';
+@import '../../node_modules/sass-mq/mq';
+
+/*
+ Basic Styling
+ -------------------
+ */
+@import "base/reset";
+@import "base/typography";
+@import "base/parallax";
+
+/*
+ Components
+ -------------------
+ */
+/* Navigation */
+@import "components/nav";
+/* Header */
+@import "components/header";
+/* Sections */
+@import "components/section";
+/* Footer */
+@import "components/footer";
+/* Container */
+@import "components/container";
+/* Forms */
+@import "components/form";
+/* Two Columns Row*/
+@import "components/row";
+/* Overlays */
+@import "components/overlay";
+/* Buttons */
+@import "components/btn";
+/* Animations */
+@import "components/blink";
+@import "components/animation";
+
+/*
+ Sections
+ -------------------
+ */
+@import "sections/video";
+@import "sections/lebenslauf";
+@import "sections/ausbildung";
+@import "sections/map";
+@import "sections/kontakt";
+@import "sections/interessen";
+@import "sections/motivation";
+
+/*
+ Pages
+ -------------------
+ */
+@import "pages/front";
+@import "pages/privacy";

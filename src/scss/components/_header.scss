@@ -1,0 +1,76 @@
+header {
+  @include mq($until:desktop) {
+    margin-top: -18rem; //move header up for mobile and tablets
+    padding-top: 12rem;
+    min-width: 350px;
+  }
+  .content {
+    padding: 3rem 1rem;
+    h1 {
+      white-space: nowrap;
+      margin: 2rem 0 4rem 0;
+      overflow: hidden;
+      @include mq($until:tablet) {
+        margin: 1rem 0 2rem 0;
+      }
+      @include mq($until:desktop) {
+        margin: 4rem 0 2rem 0;
+      }
+    }
+
+    dl {
+      max-width: 60em;
+    }
+  }
+
+  .avatar {
+    border-radius: 40rem;
+    overflow: hidden;
+    margin: 2rem 1rem 0 0;
+    width: 150px;
+    height: 150px;
+    float: right;
+    border: 4px solid $primary;
+    @include mq($until:tablet) {
+      float: none;
+      margin: auto;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .video-wrapper, .spacer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // Keep Aspect Ratio for desktop at 16:9
+    padding-bottom: calc( 9 / 16 ) * 100%;
+    @include mq($until: desktop) {
+      // Keep Aspect Ratio for tablet 3:4 (portrait)
+      padding-bottom: calc( 4 / 3 ) * 100%;
+    }
+    @include mq($until: tablet) {
+      // Keep Aspect Ratio for mobile 9:21 (portrait)
+      padding-bottom: calc( 21 / 9 ) * 100%;
+    }
+    overflow: hidden;
+  }
+  .video-wrapper {
+    video {
+      width: 100%;
+      @include mq($until:desktop) {
+        width: auto;
+        height: 100%;
+      }
+      z-index: 5;
+      position: absolute;
+      top: 0;
+    }
+    z-index: 10;
+    &:after {
+      z-index: 11;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+footer {
+  background-color: $dark;
+  position: relative;
+  z-index: 20;
+  .container {
+    display: flex;
+    @include mq($until: desktop) {
+       display: block;
+    }
+    justify-items: center;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .footer-nav,
+  .social-networks,
+  .copyright {
+    flex: 1;
+     @include mq($until: desktop) {
+       text-align: center !important;
+       margin-bottom: 1rem;
+    }
+  }
+
+  .social-networks a {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    letter-spacing: 1em;
+    overflow: hidden;
+  }
+}
